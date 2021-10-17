@@ -1,0 +1,58 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="loginForm.css">
+  <title>SIgn-in</title>
+
+</head>
+
+<body>
+
+
+  <div class="container">
+    <div class="header">
+      <h2>Enter your details</h2>
+    </div>
+    <div class="content">
+      <form name="myForm" id="myForm" action="otpValidation.html" onSubmit="return validateForm()">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" name="username" id="name" class="input-field" autocomplete="off" style='width:50%'>
+          <div class="NameMessage">
+            <p id="NameMessage1"></p>
+            <p id="NameMessage2"></p>
+            <p id="NameMessage3"></p>
+            <p id="NameMessage4"></p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="email" id="email" class="input-field" autocomplete="off" style='width:50%'>
+          
+          <p id="message1"></p>
+        </div>
+        <div class="form-group phonenum">
+          <div class="phone-group">
+            <label for="phone">Phone No.</label><br>
+            <!-- <input type="number" id="phone1" name="phone1" class="input-field"  placeholder="123-45-678" maxlength="14" required><br><br> -->
+            <input type="tel" name="phone1" id="phone1" class="input-field"  maxlength="14" minlength="14" autocomplete="off" onkeypress="return (event.charCode == 8 || event.charCode == 0 || event.charCode == 13) ? null : event.charCode >= 48 && event.charCode <= 57">
+          </div>
+            <p id="message2"></p>
+            <p id="message3"></p>
+          </div>
+          <p id="FinalMessage"></p>
+        </div>
+
+    
+        <input type="submit" value="Submit" id="submit">
+      </form>
+    </div>
+  </div>
+  </div>
+
+  <script src="loginForm.js"></script>
+
+
+</body>
+
+</html>

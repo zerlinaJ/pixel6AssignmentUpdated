@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="otpValidation.css">
+    <title>Validate OTP</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>OTP Page</h2>
+            <p id="message"></p>
+        </div>
+        <div class="content">
+            <form name="otpForm" id="otpForm" action="http://pixel6.co/" onSubmit="return validateOTP()">
+              <div class='otp'>  
+                  <label for="otp">OTP</label>
+                  <input type="text" pattern="[^a-zA-Z]+" name="otp" maxlength="4" class="input-field">
+              </div>
+                <p id="message1"></p>
+                <input type="submit" value="Submit" id='submit'>
+            </form>
+        </div>
+
+        <script src="otpValidation.js"></script>
+
+    </div>
+</body>
+</head>
+
+</html>
